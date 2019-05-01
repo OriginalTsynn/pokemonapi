@@ -4,3 +4,7 @@ For data set, I'm going to use the first 152 (og)
 Thinking of 5 models:  Pokemon, Types, Abilities, Evolutions, Sprites
 5 models, the other 4 will all reference into Pokemon
 Types is going to be purely boolean
+
+5-1-19
+decided to change abilities to stats, as the abilities don't have an immediate use for mid-range plans
+removed evolutions

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const Abilities = require('../db/models/Abilities')
-console.log(Abilities)
+const Stats = require('../db/models/Stats')
+console.log(Stats)
 
 module.exports = router
