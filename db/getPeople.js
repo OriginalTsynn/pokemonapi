@@ -1,19 +1,20 @@
 const axios = require('axios')
 const fs = require('fs')
 
-let baseURL = `https://pokeapi.com/api/v1/pokemon/`
-let peopleCount = 1
+let baseURL = `https://pokeapi.com/api/v1/pokemon`
+let peopleCount = 3
 
 let ids = []
 
 // build array of random ids
 for (let i = 0; i < peopleCount; i++) {
-  ids.push(i)
+  let rand = Math.floor(Math.random() * 10000)
+  ids.push(rand)
 }
 
 // build 20 urls to make calls to, and return array of promises with those urls
 // @ts-ignore
-let calls = ids.map(id => `${baseURL}${id}`).map(url => axios.get(url))
+let calls = ids.map(id => `${baseURL}/${id}`).map(url => axios.get(url))
 
 // execute all promises, writing to disk if successful
 Promise.all(calls)

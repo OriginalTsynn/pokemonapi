@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/notes-checkpoint', {
+mongoose.connect('mongodb://localhost/pokelite', {
   useNewUrlParser: true
 })
 

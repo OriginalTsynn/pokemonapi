@@ -1,12 +1,15 @@
 const mongoose = require('./connection')
 
-const Pokemon = require('./models/Pokemon')
-const Stats = require('./models/Stats')
-const Types = require('./models/Types')
-const Sprites = require('./models/Sprites')
+// @ts-ignore
+const bulbasaur = require('./bulbasaur.json')
+
+const Pokemon = require('../models/Pokemon')
+const Stats = require('../models/Stats')
+const Types = require('../models/Types')
+const Sprites = require('../models/Sprites')
 
 Pokemon.deleteMany({}).then(() => {
-  Pokemon.create(Pokemon)
+  Pokemon.create(bulbasaur)
     .then(newPokemon => {
       console.log(newPokemon)
     })
@@ -16,7 +19,7 @@ Pokemon.deleteMany({}).then(() => {
 })
 
 Stats.deleteMany({}).then(() => {
-  Stats.create(Stats)
+  Stats.create(bulbasaur)
     .then(newStats => {
       console.log(newStats)
     })
@@ -26,7 +29,7 @@ Stats.deleteMany({}).then(() => {
 })
 
 Types.deleteMany({}).then(() => {
-  Types.create(Types)
+  Types.create(bulbasaur)
     .then(newTypes => {
       console.log(newTypes)
     })
@@ -36,7 +39,7 @@ Types.deleteMany({}).then(() => {
 })
 
 Sprites.deleteMany({}).then(() => {
-  Sprites.create(Sprites)
+  Sprites.create(bulbasaur)
     .then(newSprites => {
       console.log(newSprites)
     })

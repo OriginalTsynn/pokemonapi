@@ -1,16 +1,16 @@
-const mongoose = require('../connection')
+const mongoose = require('../db/connection')
 
 const typeSchema = new mongoose.Schema({
   types: [
     {
       slot: Number,
-      type: {
+      type2: {
         name: String
       }
     },
     {
       slot: Number,
-      type: {
+      type1: {
         name: String
       }
     }
