@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const Pokemon = require('../db/models/Pokemon')
-console.log(Pokemon)
+const Types = require('../db/models/Types')
+console.log(Types)
 
 module.exports = router
