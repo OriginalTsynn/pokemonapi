@@ -1,7 +1,7 @@
 const mongoose = require('./connection')
 
 const Pokemon = require('./models/Pokemon')
-const Abilities = require('./models/Abilities')
+const Stats = require('./models/Stats')
 const Types = require('./models/Types')
 const Sprites = require('./models/Sprites')
 
@@ -15,10 +15,10 @@ Pokemon.deleteMany({}).then(() => {
     })
 })
 
-Abilities.deleteMany({}).then(() => {
-  Abilities.create(Abilities)
-    .then(newAbilities => {
-      console.log(newAbilities)
+Stats.deleteMany({}).then(() => {
+  Stats.create(Stats)
+    .then(newStats => {
+      console.log(newStats)
     })
     .catch(err => {
       console.log(err)
