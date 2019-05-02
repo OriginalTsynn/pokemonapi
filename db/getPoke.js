@@ -4,7 +4,7 @@ const axios = require('axios')
 const fs = require('fs')
 
 let baseURL = `https://pokeapi.co/api/v1/pokemon/`
-let pokeCount = 153
+let pokeCount = 152
 
 let ids = []
 
