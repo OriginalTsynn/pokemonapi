@@ -4,7 +4,38 @@ For data set, I'm going to use the first 152 (og)
 Thinking of 5 models:  Pokemon, Types, Abilities, Evolutions, Sprites
 5 models, the other 4 will all reference into Pokemon
 Types is going to be purely boolean
+    5-1-19 decided to port over as-is.  I can convert to boolean in later game logic instead.
 
-5-1-19
+5-1-19  Day
 decided to change abilities to stats, as the abilities don't have an immediate use for mid-range plans
 removed evolutions
+
+5-1-19 Night
+Resolved Axios issues.
+    notable errors when porting from the tv-browser to make it work for my intents:
+        --  first issue:  Spelling oversight for a while.  I mispelled the url which was causing timeouts
+                solution:  https://pokeapi.com/api/v1/pokemon/  =>  https://pokeapi.co/api/v1/pokemon/
+                Sometimes it's hard to notice those small mistakes!
+        --  second issue:  i was initializing at 0.  Pokemon is not 0 base.
+                solution:  for (let i = 0; i < pokeCount; i++) =>  for (let i = 1; i < pokeCount; i++)
+        --  third issue:  Cast to array error in referencing.
+                    reason:  was blindly copy and pasting from previos hw/labs without looking into logic.
+                    solution:  stackoverflow and mongoose docs are your friend.  In order to reference it the way I wanted
+                                within the pokemon model, I couldn't call for an objectID because I was trying to pass an entire object through
+                                to resolve, change types.objectID => types.Mixed
+
+
+5-2-19
+    issue:  Crashed on batch import of all 153
+        reason: 28M lines of code is too much for one json.
+            solution:  Broke the json import into batches of 20 pokemon per (163k lines per json)
+            TODO:  Automate the process, I batched manually by changing integer values for the loop
+Updated Seed file to incorporate pulling from multiple batches.  Please advise if there is a more effecient way of doing it than what I utilized.
+
+Pre lunch:
+    Currently functional:
+                            Axios (getPoke.js)
+                            seed.js
+                            index.js
+                            All Models are individually functional
+                            Sprites, Stats, and Types all relate into Pokemon.

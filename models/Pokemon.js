@@ -1,13 +1,22 @@
 const mongoose = require('../db/connection')
 
-const Sprites = require('../models/Sprites')
-
 const pokemonSchema = new mongoose.Schema({
   name: String,
   height: Number,
   weight: Number,
   id: Number,
-  _sprites: { type: mongoose.Schema.Types.ObjectId, ref: 'Sprites' }
+  sprites: {
+    type: mongoose.Schema.Types.Mixed,
+    ref: 'Sprites'
+  },
+  stats: {
+    type: mongoose.Schema.Types.Mixed,
+    ref: 'Stats'
+  },
+  types: {
+    type: mongoose.Schema.Types.Mixed,
+    ref: 'Types'
+  }
 })
 
 module.exports = mongoose.model('Pokemon', pokemonSchema)
