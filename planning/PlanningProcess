@@ -39,3 +39,9 @@ Pre lunch:
                             index.js
                             All Models are individually functional
                             Sprites, Stats, and Types all relate into Pokemon.
+                            CRUD on pokemon controller
+
+Post Lunch:
+    Implemented full CRUD across the board
+    Added a couple unique CRUD for user ease (to look up anything by pokedexID as opposed to _id)
+    fixed batch file, had called for one too many and had pokemon from 2nd generation.
