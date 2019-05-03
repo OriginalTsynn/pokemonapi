@@ -11,6 +11,8 @@ This is a poke-lite api! Based off of data generated from pokeapi.co.
 
 # paths:
 
+# Pokemon
+
 ## /api/pokemon/
 
 -- as a GET this will return all 151 pokemon
@@ -35,6 +37,8 @@ This is a poke-lite api! Based off of data generated from pokeapi.co.
 ## /api/pokemon/delete/:id
 
 -- this is a DELETE path, to remove an entire pokemon entry based on its express ID
+
+# Sprites
 
 ## /api/sprites/
 
@@ -61,6 +65,8 @@ This is a poke-lite api! Based off of data generated from pokeapi.co.
 
 -- this is a DELETE path, to remove an entire pokemon sprite entries based on its express ID
 
+# Types
+
 ## /api/types/
 
 -- as a GET this will return all 151 pokemons type pairings
@@ -85,6 +91,8 @@ This is a poke-lite api! Based off of data generated from pokeapi.co.
 ## /api/types/delete/:id
 
 -- this is a DELETE path, to remove an entire pokemon types entries based on its express ID
+
+# Stats
 
 ## /api/stats/
 
