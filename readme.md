@@ -1,4 +1,18 @@
-This is a poke-lite api! Based off of data generated from pokeapi.co.
+# pokeliteapi
+
+This is a RESTful pokeliteapi! <br>
+This is for my unit two project for General Assembly's Software Engineering Immersive program <br>
+Data originated from scraping pokeapi.co for the first 151 pokemon, and passed through my models
+<br><br>
+
+## technologies used:
+
+database created on MongoDB <br>
+Hosted on Mongo Atlas <br>
+API was created with Node.js, Express, and Mongoose <br>
+Deployed via Heroku <br>
+
+## link to API
 
 https://floating-peak-48613.herokuapp.com/api/pokemon/
 
@@ -11,9 +25,32 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ---
 
-# paths:
+# Pokemon Model
+
+Sprites, Stats, and Types all relate in to Pokemon
+
+# Paths:
 
 # Pokemon
+
+    const pokemonSchema = new mongoose.Schema({
+    name: String,
+    height: Number,
+    weight: Number,
+    id: Number,
+    sprites: {
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Sprites'
+    },
+    stats: {
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Stats'
+    },
+    types: {
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Types'
+        }
+        })
 
 ## /api/pokemon/
 
@@ -42,6 +79,19 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 # Sprites
 
+    const spriteSchema = new mongoose.Schema({
+    sprites: {
+    back_default: String,
+    back_female: String,
+    back_shiny: String,
+    back_shiny_female: String,
+    front_default: String,
+    front_female: String,
+    front_shiny: String,
+    front_shiny_female: String
+    }
+    })
+
 ## /api/sprites/
 
 -- as a GET this will return all 151 pokemons sprites groupings
@@ -68,6 +118,23 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 -- this is a DELETE path, to remove an entire pokemon sprite entries based on its express ID
 
 # Types
+
+    const typeSchema = new mongoose.Schema({
+      types: [
+    {
+      slot: Number,
+      type2: {
+        name: String
+             }
+    },
+    {
+      slot: Number,
+      type1: {
+        name: String
+             }
+    }
+            ]
+    })
 
 ## /api/types/
 
@@ -96,6 +163,47 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 # Stats
 
+    const statSchema = new mongoose.Schema({
+    stats: [
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    },
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    },
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    },
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    },
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    },
+    {
+      base_stat: Number,
+      stat: {
+        name: String
+            }
+    }
+           ]
+    })
+
 ## /api/stats/
 
 -- as a GET this will return all 151 pokemons stat blocks
@@ -123,9 +231,7 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 # A Pokemon entry will contain:
 
-## underscore id
-
-<!-- it wont let me use _id -->
+## \_id
 
 is the express assigned ID
 
