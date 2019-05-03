@@ -55,7 +55,7 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ## /api/pokemon/id/:id
 
--- this path will retrieve a single pokemon based on its express ID
+-- this path will retrieve a single pokemon based on its express \_id
 
 ## /api/pokemon/pokedexID/:id
 
@@ -65,13 +65,17 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 -- this path will retrieve a single pokemon based on its name (must be typed lowercase)
 
+## /api/pokemon/create/
+
+-- this path will CREATE a new pokemon entry
+
 ## /api/pokemon/update/:id
 
--- this is a PUT path, to UPDATE a single pokemon based on its express ID
+-- this is a PUT path, to UPDATE a single pokemon based on its express \_id
 
 ## /api/pokemon/delete/:id
 
--- this is a DELETE path, to remove an entire pokemon entry based on its express ID
+-- this is a DELETE path, to remove an entire pokemon entry based on its express \_id
 
 # Sprites
 
@@ -95,7 +99,7 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ## /api/sprites/id/:id
 
--- this path will retrieve a single pokemon sprites based on its express ID
+-- this path will retrieve a single pokemon sprites based on its express \_id
 
 ## /api/sprites/pokedexID/:id
 
@@ -105,13 +109,17 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 -- this path will retrieve a single pokemon sprites based on its name (must be typed lowercase)
 
+## /api/sprites/create/
+
+-- this path will CREATE a new sprites entry
+
 ## /api/sprites/update/:id
 
--- this is a PUT path, to UPDATE a single pokemon sprites based on its express ID
+-- this is a PUT path, to UPDATE a single pokemon sprites based on its express \_id
 
 ## /api/sprites/delete/:id
 
--- this is a DELETE path, to remove an entire pokemon sprite entries based on its express ID
+-- this is a DELETE path, to remove an entire pokemon sprite entries based on its express \_id
 
 # Types
 
@@ -139,7 +147,7 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ## /api/types/id/:id
 
--- this path will retrieve a single pokemon types based on its express ID
+-- this path will retrieve a single pokemon types based on its express \_id
 
 ## /api/types/pokedexID/:id
 
@@ -149,13 +157,17 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 -- this path will retrieve a single pokemon types based on its name (must be typed lowercase)
 
+## /api/types/create/
+
+-- this path will CREATE a new types entry
+
 ## /api/types/update/:id
 
--- this is a PUT path, to UPDATE a single pokemon types based on its express ID
+-- this is a PUT path, to UPDATE a single pokemon types based on its express \_id
 
 ## /api/types/delete/:id
 
--- this is a DELETE path, to remove an entire pokemon types entries based on its express ID
+-- this is a DELETE path, to remove an entire pokemon types entries based on its express \_id
 
 # Stats
 
@@ -207,7 +219,7 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ## /api/stats/id/:id
 
--- this path will retrieve a single pokemon stat block based on its express ID
+-- this path will retrieve a single pokemon stat block based on its express \_id
 
 ## /api/stats/pokedexID/:id
 
@@ -217,19 +229,23 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 -- this path will retrieve a single pokemon stat block based on its name (must be typed lowercase)
 
+## /api/stats/create/
+
+-- this path will CREATE a new stat block entry
+
 ## /api/stats/update/:id
 
--- this is a PUT path, to UPDATE a single pokemon stat block based on its express ID
+-- this is a PUT path, to UPDATE a single pokemon stat block based on its express \_id
 
 ## /api/stats/delete/:id
 
--- this is a DELETE path, to remove an entire pokemon stat block entries based on its express ID
+-- this is a DELETE path, to remove an entire pokemon stat block entries based on its express \_id
 
 # A Pokemon entry will contain:
 
 ## \_id
 
-is the express assigned ID
+is the unique express assigned \_id
 
 ## height
 
