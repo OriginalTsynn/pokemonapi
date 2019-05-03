@@ -45,3 +45,13 @@ Post Lunch:
     Implemented full CRUD across the board
     Added a couple unique CRUD for user ease (to look up anything by pokedexID as opposed to _id)
     fixed batch file, had called for one too many and had pokemon from 2nd generation.
+
+5-3-19
+Documenting and Deployment
+final tweaks
+
+
+Things left to do:
+    Add an abilities model/controller
+    Build out a front end (pokeDex themed, probably will utilize React)
+    Add subdocument to Types, for future game logic potential
