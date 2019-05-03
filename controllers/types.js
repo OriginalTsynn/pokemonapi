@@ -31,7 +31,7 @@ router.get('/name/:name', (req, res) => {
   )
 })
 // Create a Types set
-router.post('/', (req, res) => {
+router.post('/create', (req, res) => {
   let newTypes = req.body
   console.log(newTypes)
   Types.create(newTypes).then(created => {

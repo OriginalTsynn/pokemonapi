@@ -26,7 +26,7 @@ router.get('/name/:name', (req, res) => {
   )
 })
 // Create a Pokemon
-router.post('/', (req, res) => {
+router.post('/create', (req, res) => {
   let newPokemon = req.body
   console.log(newPokemon)
   Pokemon.create(newPokemon).then(created => {

@@ -31,7 +31,7 @@ router.get('/name/:name', (req, res) => {
   )
 })
 // Create a Sprites
-router.post('/', (req, res) => {
+router.post('/create', (req, res) => {
   let newSprites = req.body
   console.log(newSprites)
   Sprites.create(newSprites).then(created => {

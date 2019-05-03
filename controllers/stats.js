@@ -29,7 +29,7 @@ router.get('/name/:name', (req, res) => {
   )
 })
 // Create a Stats
-router.post('/', (req, res) => {
+router.post('/create', (req, res) => {
   let newStats = req.body
   console.log(newStats)
   Stats.create(newStats).then(created => {
