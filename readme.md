@@ -25,10 +25,6 @@ https://floating-peak-48613.herokuapp.com/api/pokemon/
 
 ---
 
-# Pokemon Model
-
-Sprites, Stats, and Types all relate in to Pokemon
-
 # Paths:
 
 # Pokemon
