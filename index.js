@@ -16,4 +16,10 @@ app.use('/api/sprites', usersController)
 app.use('/api/types', typeController)
 app.use('/api/stats', statController)
 
-app.listen(3000, () => console.log('We have lift-off!  Port 3000 is go!'))
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
+
+// app.listen(3000, () => console.log('We have lift-off!  Port 3000 is go!'))
