@@ -1,5 +1,7 @@
 This is a poke-lite api! Based off of data generated from pokeapi.co.
 
+https://floating-peak-48613.herokuapp.com/api/pokemon/
+
 ## dependencies:
 
     "axios": "^0.18.0",
