@@ -1,6 +1,6 @@
 Original plan was to use Riot API, but it didn't have the data I was hoping it would to make it fun, so I've decided to return to the tried ansd true pokeapi!
 
-For data set, I'm going to use the first 152 (og)
+For data set, I'm going to use the first 151 (og)
 Thinking of 5 models:  Pokemon, Types, Abilities, Evolutions, Sprites
 5 models, the other 4 will all reference into Pokemon
 Types is going to be purely boolean
