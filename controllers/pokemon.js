@@ -11,6 +11,10 @@ router.get('/', (req, res) => {
     res.json(allPokemons)
   })
 })
+// List a Pokemon by id
+router.get('/id/:id', (req, res) => {
+  Pokemon.find({ _id: req.params.id }).then(objectbyID => res.json(objectbyID))
+})
 // List a single Pokemon by id (pokedexID)
 router.get('/pokedexID/:id', (req, res) => {
   Pokemon.find({ id: req.params.id }).then(objectbyID => res.json(objectbyID))
@@ -37,7 +41,7 @@ router.put('/update/:id', (req, res) => {
 })
 // Delete a Pokemon by id
 router.delete('/delete/:id', (req, res) => {
-  Pokemon.deleteOne({ id: req.params.id }).then(deleted => {
+  Pokemon.deleteOne({ _id: req.params.id }).then(deleted => {
     console.log(deleted)
     res.json(deleted)
   })

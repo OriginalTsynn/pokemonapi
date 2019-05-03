@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 })
 // Update a Sprite by id
 router.put('/update/:id', (req, res) => {
-  Sprites.findOneAndUpdate({ id: req.params.id }, req.body).then(updated => {
+  Sprites.findOneAndUpdate({ _id: req.params.id }, req.body).then(updated => {
     res.json(updated)
   })
 })

@@ -46,7 +46,7 @@ router.put('/update/:id', (req, res) => {
 })
 // Delete a Types by id
 router.delete('/delete/:id', (req, res) => {
-  Types.deleteOne({ id: req.params.id }).then(deleted => {
+  Types.deleteOne({ _id: req.params.id }).then(deleted => {
     console.log(deleted)
     res.json(deleted)
   })
